@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h3>Welcome to site</h3>
+<table class="table v">
+    <tr>
+        <th>status</th>
+        <td>{{status}}</td>
+    </tr>
+    <tr>
+        <th>score</th>
+        <td>{{result}}</td>
+    </tr>
+    <tr>
+        <th>your ip</th>
+        <td>{{queryIP}}</td>
+    </tr>
+</table>
+{% endblock %}

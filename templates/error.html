@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h3>Error in Request</h3>
+<table class="table table-bordered">
+    <tr>
+        <th>status</th>
+        <td>{{status}}</td>
+    </tr>
+    <tr>
+        <th>Reason</th>
+        <td>{{message}}</td>
+    </tr>
+</table>
+{% endblock %}
