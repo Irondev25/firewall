@@ -21,7 +21,8 @@ def get_score(ip_addr):
     # response = requests.request("GET", url, headers=headers, data = payload)
     # print(response.text.encode('utf8'))
     # result = json.loads(response.text)
-    result = json.loads('{"status":"success","result":"0.1","queryIP":"66.228.119.72","queryFlags":"m","queryFormat":"json","contact":"AValidEmailAddress"}')
+    # result = json.loads('{"status":"success","result":"0.1","queryIP":"66.228.119.72","queryFlags":"m","queryFormat":"json","contact":"AValidEmailAddress"}')
+    result = json.loads('{"status":"error","result":"-2","message":"Invalid IP address","queryIP":"10.10.10.10,8.8.8.8","queryFlags":null,"queryFormat":"json","contact":"AValidEmailAddress"}')
     return result
 
 def get_client_ip(request):
