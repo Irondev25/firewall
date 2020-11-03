@@ -13,7 +13,7 @@ Failure structure
 '''
 
 def get_score(ip_addr):
-    url = "http://check.getipintel.net/check.php?ip="+ip_addr+"&format=json&flag=f"
+    url = "http://check.getipintel.net/check.php?ip="+ip_addr+"&format=json&flag=f&contact=bhaskar.rahul25@gmail.com"
     payload = {}
     headers = {
     'Cookie': '__cfduid=dccae4c03485c13d70073a98ccaf35b251602771240'
