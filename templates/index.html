@@ -9,11 +9,55 @@
     </tr>
     <tr>
         <th>score</th>
-        <td>{{result}}</td>
+        <td id="result">{{result}}</td>
     </tr>
     <tr>
         <th>your ip</th>
         <td>{{queryIP}}</td>
     </tr>
 </table>
+
+<h2 id="status">Please Wait</h2>
+{% endblock %}
+
+{% block script %}
+<script>
+    function sleep(milliseconds) {
+        const date = Date.now();
+        let currentDate = null;
+        do {
+            currentDate = Date.now();
+        } while (currentDate - date < milliseconds);
+    }
+
+    // const delay = ms => new Promise(res => setTimeout(res,ms));
+    var res = parseFloat($("#result").text());
+    // console.log("wait 2 sec");
+    // sleep(2000)
+    // console.log("wait finished");
+    sleep(4000)
+    if(res <= 0.8) {
+        for(i=0; i<5; i++){
+            $.ajax(
+            {
+                type: "GET",
+                url: "dummy",
+                success: function(data) {
+                    $("#status").append(".");
+                }
+            }
+        )
+        }
+
+        // $.ajax(
+        //     {
+        //         type: "GET",
+        //         url: "stop_capture",
+        //         success: function(data) {
+        //             $("#status").append(".");
+        //         }
+        //     }
+        // )
+    }
+</script>
 {% endblock %}
