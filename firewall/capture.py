@@ -13,6 +13,7 @@ class CaptureThread(object):
         self.ip = ip
         self.file_name = os.path.join(settings.BASE_DIR,'firewall/VPNNuralNet/captures/capture_'+ip+'.pcap')
         self.rule_file = os.path.join(settings.BASE_DIR,'firewall/utils/rules.xml')
+        self.data_file = os.path.join(settings.BASE_DIR, 'firewall/utils/flowstats/netmate.out')
 
         thread = threading.Thread(target=self.run)
         thread.daemon = True
@@ -35,7 +36,7 @@ class CaptureThread(object):
         # siteListEntry = SiteList(self.ip,resBool)
         # siteListEntry.save()
         print(resBool)
-        os.system("cp /media/irondev25/e_drive/7th_sem/project/code/code/firewall/firewall/utils/flowstats/netmate.out /home/irondev25/netmate"+self.ip+".out")
-        os.system("rm /media/irondev25/e_drive/7th_sem/project/code/code/firewall/firewall/utils/flowstats/netmate.out")
+        # os.system("cp /media/irondev25/e_drive/7th_sem/project/code/code/firewall/firewall/utils/flowstats/netmate.out /home/irondev25/netmate"+self.ip+".out")
+        os.system("rm "+self.data_file)
 
         

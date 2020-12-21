@@ -10,7 +10,7 @@
     </ACTION>
 
     <EXPORT NAME="ac_file">
-      <PREF NAME="Filename">/media/irondev25/e_drive/7th_sem/project/code/code/firewall/firewall/utils/flowstats/netmate.out</PREF>
+      <PREF NAME="Filename">/home/ubuntu/firewall/firewall/utils/flowstats/netmate.out</PREF>
       <PREF NAME="FlowID">no</PREF>
       <PREF NAME="ExportStatus">no</PREF>
     </EXPORT>
